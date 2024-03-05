@@ -45,5 +45,5 @@ jobs:
           git config --global user.name "Sameera Dissanayaka"
           git add deployment.yml
           git commit -m "Update deployment image tag to ${{ github.run_number }}"
-          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/iam-sameera/argocd-k8s-deploy.git
+          git remote set-url origin https://x-access-token:${{ secrets.SAM }}@github.com/iam-sameera/argocd-k8s-deploy.git
           git push 
