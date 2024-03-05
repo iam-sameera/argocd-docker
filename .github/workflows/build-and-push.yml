@@ -41,7 +41,15 @@ jobs:
       - name: Access cloned repository content
         run: |
           cd argocd-k8s-deploy
-          cat deployment.yml
           sed -i "s/devopswithsam\/argodemo:latest/devopswithsam\/argodemo:${{ github.run_number }}/; /devopswithsam\/argodemo:${{ github.run_number }}/! s/devopswithsam\/argodemo/devopswithsam\/argodemo:${{ github.run_number }}/" deployment.yml
-          cat deployment.yml
+          git config --global user.email "devopssameera@gmail.com"
+          git config --global user.name "Sameera Dissanayaka"
+          git add deployment.yml
+          git commit -m "Update deployment.yml ${{ github.run_number }}"
+
+      - name: Push to Repository argocd-k8s-deploy
+        run: |
+          cd argocd-k8s-deploy
+          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/iam-sameera/argocd-k8s-deploy.git
+          git push origin main
           
