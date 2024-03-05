@@ -49,7 +49,6 @@ jobs:
 
       - name: Push to Repository argocd-k8s-deploy
         run: |
-          cd argocd-k8s-deploy
           git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/iam-sameera/argocd-k8s-deploy.git
           git push origin main
           
