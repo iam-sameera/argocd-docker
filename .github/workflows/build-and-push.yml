@@ -42,6 +42,6 @@ jobs:
         run: |
           cd argocd-k8s-deploy
           cat deployment.yml
-          sed -i "s|image: devopswithsam/argodemo:[0-9]*|image: devopswithsam/argodemo:${{ github.run_number }}|g" deployment.yml
+          sed -i "s/devopswithsam\/argodemo:latest/devopswithsam\/argodemo:${{ github.run_number }}/g; s/devopswithsam\/argodemo/devopswithsam\/argodemo:${{ github.run_number }}/g" deployment.yml
           cat deployment.yml
           
