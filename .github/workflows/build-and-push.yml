@@ -41,7 +41,7 @@ jobs:
       - name: Access cloned repository content
         run: |
           cd argocd-k8s-deploy
-          sed -i "s/devopswithsam\/argodemo:latest/devopswithsam\/argodemo:${{ github.run_number }}/; /devopswithsam\/argodemo:${{ github.run_number }}/! s/devopswithsam\/argodemo/devopswithsam\/argodemo:${{ github.run_number }}/" deployment.yml
+          sed -i "s/devopswithsam\/argodemo:[0-9]*\|devopswithsam\/argodemo:latest/devopswithsam\/argodemo:${{ github.run_number }}/" deployment.yml
           git config --global user.email "devopssameera@gmail.com"
           git config --global user.name "Sameera Dissanayaka"
           git add deployment.yml
