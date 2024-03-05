@@ -41,4 +41,5 @@ jobs:
       - name: Access cloned repository content
         run: |
           cd argocd-k8s-deploy
-          ls
+          cat deployment.yml
+          
