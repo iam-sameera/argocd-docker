@@ -1,4 +1,5 @@
 # CI/CD Pipeline with GitHub, Docker, Kubernetes, and ArgoCD
+[Full Tutorial](https://medium.com/@sameeradissanayaka/complete-ci-cd-pipeline-gitops-project-with-docker-kubernetes-githubactions-and-argocd-step-by-step-cebf766c9d42)
 
 This repository serves as a guide to understanding a complete CI/CD pipeline utilizing GitHub, Docker, Kubernetes, and ArgoCD. 
 The pipeline consists of two main parts.
